@@ -1,0 +1,14 @@
+.sidebar-container {
+    background-color:var(--bg-light) !important ;
+}
+.sidebar-list  a{
+    text-decoration: none;
+    color: var(--black-text) !important;
+}
+.sidebar-list  a .sidebar-item{
+    text-decoration: none;
+    color: var(--black-text) !important;
+}
+.sidebar-icon{
+    fill: var(--main-color) !important;
+}

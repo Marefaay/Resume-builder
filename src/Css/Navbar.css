@@ -1,0 +1,99 @@
+.links ul a {
+  text-decoration: none;
+  text-transform: capitalize;
+
+  color: var(--black-text) !important;
+  font-size: 20px;
+}
+.navbar{
+  background-color: var(--bg-light);
+}
+.logo img {
+  width: 50px !important;
+  cursor: pointer;
+}
+.responseive-nav {
+  width: 50%;
+  height: 100%;
+  background-color: var(--main-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 150px;
+}
+.responseive-nav ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  flex-direction: column;
+  gap: 40px;
+}
+.responseive-nav ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+}
+.fly-nav {
+  position: fixed;
+  left: 10px;          /* بدلاً من left: 50% */
+  bottom: 50%;
+  transform: translateY(50%); 
+  color: #fff;
+  background-color: var(--main-color);
+  width: 50px; 
+  height: 250px;         /* عرض صغير لأن العناصر ستصبح عمودية */
+  padding: 15px 10px;
+  padding-top: 50px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.fly-nav .row {
+  display: flex;
+  flex-direction: column; /* 👈 يجعل العناصر عمودية */
+  gap: 50px;
+}
+
+.fly-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column; /* الأيقونة فوق النص */
+  align-items: center;
+}
+.nav-item a{
+  color: var(--black-text);
+}
+.nav-item a:hover,.nav-item a:active{
+  background-color: var(--main-color) !important;
+color: #fff !important;
+}
+.theme-icon{
+  color: var(--main-color) !important;
+  background-color: transparent;
+  font-size: 18px;
+}
+#login-btn{
+  text-decoration: none;
+  background-color: var(--main-color);
+width: 10%;
+  color: var(--text-color);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+#login-btn:hover{
+  background-color: var(--hover-color);
+}
+#logout-btn{
+  color: var(--main-color) !important;
+  font-size: 25px;
+  margin-left: 15px;
+}

@@ -1,0 +1,97 @@
+.cv1 {
+  width: 80%;
+  /* max-width: 800px; */
+  border: 2px solid var(--main-color);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+  /* display: none; */
+  position: relative;
+}
+
+.name {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contact {
+  color: var(--text-black-50);
+  font-size: 1rem;
+  width: 90%;
+  /* border: 1px solid red; */
+}
+.cv1 p{
+  text-align: justify;
+  color: var(--black-text);
+}
+.cv1 li{
+  color: var(--black-text);
+}
+.cv1 .job-title,.cv1 .education-head{
+  color: var(--black-text);
+}
+.cv1 .skill{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.Skills ul,
+.education ul,
+.projects ul,
+.experince ul {
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+
+.projects ul li,
+.experince ul li {
+  font-weight: bold;
+}
+
+#gradution-date {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  font-size: 0.9rem;
+}
+
+.cv1 #project-date {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 35%;
+  position: relative;
+}
+
+.cv1 #project-date a,
+.cv1 #project-date span {
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+.cv1 .ex-ul {
+  position: relative;
+}
+.cv1 #experince-date {
+  overflow: hidden;
+  margin-left: auto;
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 15px;
+  position: relative;
+  left: 70%;
+  top: 20px;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,29 @@
+.form-contanier {
+  margin-top: 35px;
+  background-color: #fff;
+  box-shadow: 0 0 10px -2px #000;
+  width: 60%;
+  /* background-color: aqua; */
+  border-radius: 10px;
+  padding: 25px;
+}
+.form-header h2{
+    color: var(--main-color);
+}
+.form-header h5{
+    color: var(--text-black-50);
+}
+.form-header svg{
+    color:var(--main-color);
+    font-size: 50px;
+}
+ .form-contanier form label{
+    color: var(--black-text);
+}
+#submit-login-btn{
+    background-color: var(--main-color) !important;
+    border: none !important;
+    width: 100% !important;
+    font-size: 20px !important;
+
+}

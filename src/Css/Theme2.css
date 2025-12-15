@@ -1,0 +1,66 @@
+.sidebar-container {
+  position: fixed;
+  top: 11%;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #e6e1e14b;
+  padding: 20px 0px;
+/* font-size: 15px; */
+  z-index: 2;
+  border-left: 2px solid #ddd;
+}
+
+/* List general styling */
+.sidebar-list {
+  background: transparent;
+  gap: 15px;
+  padding: 0 0px;
+}
+
+/* Each list item */
+.sidebar-item {
+    font-size: 15px;
+  background: transparent !important;
+  border: none !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.sidebar-item:hover {
+  background: #ffffffa8 !important;
+  transform: translateX(5px);
+}
+
+/* Active item (use className "active" in JSX when needed) */
+.sidebar-item.active {
+  background: #007bff !important;
+  color: white !important;
+}
+
+/* Icon styling */
+.sidebar-icon {
+  font-size: 18px;
+  color: #007bff;
+}
+.content{
+    /* background-color: red; */
+    margin-left: 40%;
+    /* padding: 0; */
+}
+.cv-contanier{
+    /* margin-left: 35%; */
+    margin-top: 0;
+    padding: 0;
+    background-color: blue;
+}

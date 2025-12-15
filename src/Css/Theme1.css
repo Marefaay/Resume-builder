@@ -1,0 +1,119 @@
+.theme1 .container {
+  min-height: 10vh;
+}
+
+.head-section {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#add-projects,
+#add-experince{
+  width: 100%;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-size: 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#add-projects:hover,
+#add-experince:hover,
+#submit-btn:hover {
+background-color: var(--hover-color); 
+  box-shadow: 0 6px 14px rgba(56, 178, 172, 0.45);}
+
+
+#modal {
+  position: relative;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#modal::before,
+#modal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  background-color: transparent;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#modal::before {
+  top: 0;
+  left: 0;
+  border-top-color: violet;
+  border-left-color: violet;
+  animation-name: colored-border2;
+}
+
+#modal::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-color: blue;
+  border-right-color: blue;
+  animation-name: colored-border;
+}
+
+@keyframes colored-border {
+  100% {
+    width: 100%;
+    height: 100%;
+    border-color: red;
+  }
+}
+
+@keyframes colored-border2 {
+  100% {
+    width: 100%;
+    height: 100%;
+    border-color: blue;
+  }
+}
+
+#close-icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#download-pdf-btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 15px;
+  position: fixed;
+  bottom: 15px;
+  right: -150px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#download-pdf-btn.show {
+  right: 15px;
+}

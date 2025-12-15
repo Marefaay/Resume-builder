@@ -1,0 +1,61 @@
+.cv3 {
+  /* background-color: red; */
+  border: 2px solid #8e8e8e;
+  border-radius: 15px;
+  width: 80%;
+  text-align: center;
+  margin: 25px auto;
+}
+.cv3 h1,.cv3 h4,.cv3 li{
+  color: var(--black-text);
+}
+.cv3 .personal-data {
+  color: var(--text-black-50);
+  width: 90%;
+  text-align: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.cv3 .spacer {
+  background-color: #8e8e8e;
+  width: 90%;
+  height: 1px;
+  border-radius: 15px;
+  margin: 20px auto;
+  text-align: center;
+}
+.cv3 p {
+  text-align: justify;
+  width: 85%;
+  color: var(--text-black-50);
+  font-size: 18px;
+  margin-top: 15px;
+}
+.cv3 #project-date {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  /* margin-left: 35%; */
+  position: relative;
+}
+.cv3 #experince-date,
+.cv3 #project-date {
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  right: 14%;
+}
+
+.cv3 .skill {
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}.cv2 #language-li span{
+  display: block;
+}
+.cv2  #language-li{
+  display: flex ;
+  color: red;
+  justify-content: space-between;
+}
