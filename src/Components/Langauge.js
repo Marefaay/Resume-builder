@@ -17,7 +17,7 @@ function Language() {
             type="text"
             value={language}
             onChange={(e) => setLanguage(e.currentTarget.value)}
-            placeholder="ex:-E-commerce"
+            placeholder="ex:-Arabic"
           />
         </Form.Group>
         <Form.Group className="mb-3">

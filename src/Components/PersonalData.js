@@ -83,9 +83,7 @@ function PersonalData() {
           />
         </Form.Group>
       </Form>
-      <Link id="next" to="/theme2/education">
-        Next
-      </Link>
+    
     </>
   );
 }

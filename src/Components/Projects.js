@@ -44,6 +44,7 @@ function Projects() {
             type="text"
             value={projectLink}
             onChange={(e) => setProjectLink(e.currentTarget.value)}
+            placeholder="https://google.com"
           />
         </Form.Group>
 
@@ -62,6 +63,7 @@ function Projects() {
             as="textarea"
             value={projectDesc}
             onChange={(e) => setProjectDesc(e.currentTarget.value)}
+            placeholder="Descripbe Your Project"
           />
         </Form.Group>
 
