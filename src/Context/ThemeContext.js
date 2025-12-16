@@ -237,7 +237,7 @@ function ThemeProvider({ children }) {
   return (
     <ThemeContext.Provider
       value={{
-        Addproject,
+        Addproject,experinces,skills,
         AddLanguage,
         language,
         singleLanguage,

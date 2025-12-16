@@ -99,3 +99,11 @@
   border-radius: 15px;
   font-size: 0.9rem;
 }
+ #download-cv-btn{
+  background-color: #38b2ac !important;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  margin-left: 50%;
+}

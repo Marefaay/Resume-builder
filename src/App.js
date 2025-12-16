@@ -22,15 +22,25 @@ import Language from "./Components/Langauge";
 import Theme4 from "./Components/Theme4";
 import CVFour from "./Components/CVFour";
 import { ModeContext } from "./Context/DarkAndLightModeContext";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import LoginAndRegister from "./Components/LoginAndRegister";
 import Login from "./Components/Login";
 import Register from "./Components/Regsiter";
 import AuthProvider, { AuthContext } from "./Context/AuthContext";
+import Overlay from "./Components/Overlay";
 function App() {
+  const [loading,setLoading]=useState(true)
   const { getMode } = useContext(ModeContext);
   getMode();
-
+useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+  if (loading) {
+    return <Overlay/>;
+  }
   return (
     <div className="App">
       <Navbar />

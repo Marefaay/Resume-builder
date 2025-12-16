@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../Context/ThemeContext";
 import { Col, Container, Row } from "react-bootstrap";
 import "../Css/CVThree.css";
+  import { saveAs } from "file-saver";
+import htmlDocx from "html-docx-js/dist/html-docx";
 import Language from "./Langauge";
 function CVThree() {
   const {
@@ -50,8 +52,102 @@ function CVThree() {
     AddExperince,
     singleExperinces,
     handleSubmitClick,
-    cvRef,
+    cvRef,  experinces,
+  
+    skills,
   } = useContext(ThemeContext);
+
+
+const exportCVThreeToWord = () => {
+ 
+
+ 
+
+  const html = `
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body style="font-family: Arial, Helvetica, sans-serif; padding:30px;">
+
+    <h1>${username || "Username"}</h1>
+    <h4>${job || "Job Title"}</h4>
+    <p>${breif || "Brief"}</p>
+
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Contact</h4>
+    <p><b>Phone:</b> ${phone || "Phone number"}</p>
+    <p><b>Email:</b> ${mail || "Email address"}</p>
+    <p><b>Address:</b> ${address || "Address"}</p>
+
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Skills</h4>
+    ${skills.map((lk) => {
+    return `<ul>
+      <li>${lk}</li>
+      </ul>
+      `;
+  })}
+
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Languages</h4>
+    ${languages.map((lang) => {
+            return `
+             <ul>
+              <li>${lang.language} ${lang.languageProf}</li>
+          
+              </ul>
+              
+              `;
+          })}
+
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Projects</h4>
+    ${projects.map((sp) => {
+          return `<ul>
+          <li>${sp.project} ${sp.projectDate}</li>
+         
+          <p style="text-align:justify">${sp.projectDesc}</p>
+          
+          </ul>
+          
+          `;
+        })}
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Experience</h4>
+   ${experinces.map((ex) => {
+            return `
+              
+              <ul>
+              
+              <li>${ex.experince} ${ex.experinceDate}</li>
+             
+              <p style="text-align:justify;">${ex.experinceDesc}</p>
+              </ul>
+              `;
+          })}
+
+    <hr style="border:1px solid #8e8e8e; margin:20px 0;" />
+
+    <h4>Education</h4>
+    <p><b>${education || "University"}</b></p>
+    <p>${gradutionDate || "Graduation Year"}</p>
+    <p>${educationDesc || "Education description"}</p>
+
+  </body>
+  </html>
+  `;
+
+  const blob = htmlDocx.asBlob(html);
+  saveAs(blob, `${username}.docx`);
+};
+
   return (
     <>
       <Container className="cv3 pt-5 pb-5 ">
@@ -140,6 +236,11 @@ function CVThree() {
           </Col>
         </Row>
       </Container>
+        <Container className="w-100">
+               <button className="mt-3 mb-3 " id="download-cv-btn" onClick={exportCVThreeToWord}>
+                Download Word
+              </button>
+             </Container>
     </>
   );
 }
