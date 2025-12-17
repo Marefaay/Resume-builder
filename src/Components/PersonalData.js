@@ -20,7 +20,7 @@ function PersonalData() {
   } = useContext(ThemeContext);
   return (
     <>
-      <Form>
+      <Form className="w-75">
         <h4>Personal Data</h4>
 
         <Form.Group className="mb-3">

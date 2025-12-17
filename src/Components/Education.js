@@ -12,7 +12,7 @@ function Education() {
     setGradutionDate,
   } = useContext(ThemeContext);
   return (
-    <Form>
+    <Form className="w-75">
       <h4>Education</h4>
 
       <Form.Group className="mb-3">

@@ -1,69 +1,44 @@
-import { Col, Container, ListGroup } from "react-bootstrap"
-import { AiOutlineFileDone } from "react-icons/ai"
-import { FaRegUser } from "react-icons/fa"
-import { GoProject } from "react-icons/go"
-import { GrUserExpert } from "react-icons/gr"
-import { MdCastForEducation } from "react-icons/md"
-import { Link } from "react-router-dom"
-import {motion} from "framer-motion"
-import "../Css/Sidebar.css"
-function Sidebar(){
-    return(
-        <Container>
-             <Col lg={3} className="sidebar-container ">
-        <motion.div 
-        initial={{x:-50,opacity:0}}
-        animate={{x:0,opacity:1}}
-        transition={{duration:0.8}}
-        >
-          <Container className="w-100 h-100 side-bar">
-            <ListGroup
-             className="sidebar-list">
-              <Link
-               to="personal-data">
-                <ListGroup.Item className="sidebar-item">
-                  <FaRegUser className="sidebar-icon" />
-                  Personal Data
-                </ListGroup.Item>
-              </Link>
+import { ListGroup } from "react-bootstrap";
+import { FaRegUser } from "react-icons/fa";
+import { MdCastForEducation } from "react-icons/md";
+import { GoProject } from "react-icons/go";
+import { GrUserExpert } from "react-icons/gr";
+import { AiOutlineFileDone } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "../Css/Sidebar.css";
 
-              <Link to="education">
-                <ListGroup.Item className="sidebar-item">
-                  <MdCastForEducation className="sidebar-icon" />
-                  Education
-                </ListGroup.Item>
-              </Link>
+function Sidebar() {
+  const menuItems = [
+    { to: "personal-data", icon: <FaRegUser />, label: "Personal Data" },
+    { to: "education", icon: <MdCastForEducation />, label: "Education" },
+    { to: "languages", icon: <AiOutlineFileDone />, label: "Languages" },
+    { to: "skills", icon: <AiOutlineFileDone />, label: "Skills" },
+    { to: "work", icon: <GrUserExpert />, label: "Experience" },
+    { to: "projects", icon: <GoProject />, label: "Projects" },
+  ];
 
-              <Link to="languages">
-                <ListGroup.Item className="sidebar-item">
-                  <AiOutlineFileDone className="sidebar-icon" />
-                 languages
-                </ListGroup.Item>
-              </Link>
-              <Link to="skills">
-                <ListGroup.Item className="sidebar-item">
-                  <AiOutlineFileDone className="sidebar-icon" />
-                  Technical Skills
-                </ListGroup.Item>
-              </Link>
-              <Link to="work">
-                <ListGroup.Item className="sidebar-item">
-                  <GrUserExpert className="sidebar-icon" />
-                  Work and Experiences
-                </ListGroup.Item>
-              </Link>
-              <Link to="projects">
-                <ListGroup.Item className="sidebar-item">
-                  <GoProject className="sidebar-icon" />
-                  Projects
-                </ListGroup.Item>
-              </Link>
-            </ListGroup>
-          </Container>
-          </motion.div>
-        </Col>
-      
-        </Container>
-    )
+  return (
+    <motion.div
+      initial={{ x: -50, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="sidebar-wrapper h-100"
+    >
+      <ListGroup variant="flush" className="sidebar-list">
+        {menuItems.map((item, index) => (
+          <Link to={item.to} key={index} className="sidebar-link">
+            <ListGroup.Item className="sidebar-item d-flex align-items-center justify-content-center justify-content-md-start">
+              <span className="sidebar-icon">{item.icon}</span>
+              <span className="sidebar-text d-none d-md-block ms-3">
+                {item.label}
+              </span>
+            </ListGroup.Item>
+          </Link>
+        ))}
+      </ListGroup>
+    </motion.div>
+  );
 }
-export default Sidebar
+
+export default Sidebar;

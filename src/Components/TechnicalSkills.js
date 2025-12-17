@@ -5,7 +5,7 @@ import { useContext } from "react";
 function TechnicalSkills() {
   const { ulSkill, skill, setSkill } = useContext(ThemeContext);
   return (
-    <Form>
+    <Form className="w-75">
       <h4>Technical Skills</h4>
       <Form.Group className="mb-3">
         <Form.Label>Skills</Form.Label>

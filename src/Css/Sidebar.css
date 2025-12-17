@@ -1,4 +1,4 @@
-.sidebar-container {
+.sidebar-wrapper {
     background-color:var(--bg-light) !important ;
 }
 .sidebar-list  a{
@@ -11,4 +11,45 @@
 }
 .sidebar-icon{
     fill: var(--main-color) !important;
+}
+
+/* تنسيق وعاء السايدبار */
+.sidebar-column {
+  /* background-color: var(--bg-light); لون غامق احترافي */
+  /* min-height: 100vh; */
+  /* position: sticky;
+  top: 0; */
+}
+
+.sidebar-link {
+  text-decoration: none;
+}
+
+.sidebar-item {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  padding: 20px 15px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background: var(--bg-light) !important;
+  padding-left: 25px; 
+}
+
+.sidebar-icon {
+  font-size: 1.4rem;
+}
+
+
+.content-column {
+  /* background-color: #f4f7f6; */
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .sidebar-item {
+    padding: 20px 5px;
+  }
 }

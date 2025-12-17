@@ -8,7 +8,7 @@ function Language() {
   const proficiency = ["Fluent", "Native", "Intermediate"];
   return (
     <>
-      <Form>
+      <Form className="w-75">
         <h4>Languages</h4>
 
         <Form.Group className="mb-3">

@@ -13,7 +13,7 @@ function Work() {
     AddExperince,
   } = useContext(ThemeContext);
   return (
-    <Form>
+    <Form className="w-75">
        <h4>Work and Experinces</h4>
       <Form.Group className="mb-3">
         <Form.Label>Job title</Form.Label>

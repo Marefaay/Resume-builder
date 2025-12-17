@@ -1,11 +1,19 @@
 .form-contanier {
   margin-top: 35px;
+  margin-bottom: 35px;
   background-color: #fff;
   box-shadow: 0 0 10px -2px #000;
   width: 60%;
   /* background-color: aqua; */
   border-radius: 10px;
   padding: 25px;
+}
+@media (max-width:767px) {
+    .form-contanier{
+        width: 80%;
+        /* margin: 25px 0; */
+    }
+    
 }
 .form-header h2{
     color: var(--main-color);
